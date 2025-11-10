@@ -1,7 +1,8 @@
 streamlit
 pandas
 numpy
-matplotlib
-seaborn
 torch
 pyro-ppl
+matplotlib
+seaborn
+arviz
