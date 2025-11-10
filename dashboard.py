@@ -145,7 +145,7 @@ if "mcmc_base" not in st.session_state:
 def run_mcmc(model_fn):
     try:
         nuts_kernel = NUTS(model_fn, target_accept_prob=0.8)
-        mcmc = MCMC(nuts_kernel, num_samples=NUM_SAMPLES, warmup_steps=NUM_WARMUP, num_chains=NUM_CHAINS)
+        mcmc = MCMC(nuts_kernel, num_samples=NUM_SAMPLES, warmup_steps=NUM_WARMUP, num_chains=1)
         mcmc.run(age, team, position, pot)
         return mcmc
     except Exception as e:
@@ -462,3 +462,4 @@ st.sidebar.markdown("""
 - If imports fail: install packages and restart Streamlit.
 - If ArviZ compare fails: In some Pyro versions you may need to compute `log_likelihood` in the model or use `az.from_dict` fallback.
 """)
+
