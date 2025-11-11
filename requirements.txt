@@ -1,8 +1,10 @@
 streamlit
 pandas
 numpy
-torch
-pyro-ppl
+jax
+jaxlib
+numpyro
 matplotlib
 seaborn
 arviz
+torch
